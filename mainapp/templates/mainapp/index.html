@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Главная</title>
-</head>
-<body>
+{% extends "mainapp/base.html" %}
+{% load static %}
+{#{% load project_tags %}#}
+{% block title %}{{ title|title }}{% endblock %}
+{% block content %}
     <h1>IQworks!</h1>
-</body>
-</html>
+{% endblock %}
