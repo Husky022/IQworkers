@@ -129,6 +129,11 @@ select {
 
 }
 
+.chapter-box{
+    display: flex;
+    flex-direction: column;
+}
+
 .video-first-content{
     background-color: rgba(255, 255, 255, 1);
 }
@@ -151,6 +156,13 @@ select {
     height: 22px;
     float: left;
     display: unset;
+}
+
+.img-opportunity{
+    height: 380px;
+    width: 790px;
+    margin-top: 24px;
+
 }
 
 .img-service{
@@ -180,15 +192,22 @@ select {
     font-size: 20px;
 }
 
-.services{
+.opportunities{
     display: flex;
     flex-direction: column;
+    margin: 80px 17% 0 17%;
+}
+
+.paragraph-text{
+    font-size: 44px;
+    font-weight: bold;
+    margin: 230px auto;
+    margin-bottom: 0;
 }
 
 .services-box{
     align-items: flex-start;
     margin-top: 70px;
-    margin-bottom: 500px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -203,12 +222,6 @@ select {
     justify-content: center;
 }
 
-.services-text{
-    font-size: 44px;
-    font-weight: bold;
-    margin: 230px auto;
-    margin-bottom: 0;
-}
 
 .service-item-main-text{
     margin-top: 20px;
