@@ -153,6 +153,12 @@ select {
     display: unset;
 }
 
+.img-service{
+    width: 135px;
+    height: 124px;
+    margin: auto;
+}
+
 .main-text{
     font-size: 64px;
     font-weight: bold;
@@ -172,6 +178,46 @@ select {
     justify-content: space-evenly;
     flex-wrap: wrap;
     font-size: 20px;
+}
+
+.services{
+    display: flex;
+    flex-direction: column;
+}
+
+.services-box{
+    align-items: flex-start;
+    margin-top: 70px;
+    margin-bottom: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.service-box-item{
+    text-align: center;
+    width: 400px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+
+.services-text{
+    font-size: 44px;
+    font-weight: bold;
+    margin: 230px auto;
+    margin-bottom: 0;
+}
+
+.service-item-main-text{
+    margin-top: 20px;
+    font-size: 28px;
+}
+
+.service-item-text{
+    margin-top: 20px;
+    font-size: 18px;
 }
 
 .submain-text{
