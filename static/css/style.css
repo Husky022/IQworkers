@@ -29,6 +29,11 @@ dd {
   margin: 0;
 }
 
+html{
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
 /* Set core body defaults */
 body {
   min-height: 100vh;
@@ -73,9 +78,6 @@ select {
 }
 
 .container-logo{
-  position: absolute;
-  left: 120px;
-  top: 33px;
   height: 62px;
   width: 204px;
 }
@@ -86,5 +88,26 @@ select {
   width: 100%;
   background: linear-gradient( rgba(13, 13, 13, 0.7), rgba(13, 13, 13, 0.7) ), url(/static/img/main_image.svg) center center;
   /*background-size: 100%;*/
+}
+
+.container-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+ul {
+  list-style: none; /*убираем маркеры списка*/
+  margin: 0; /*убираем отступы*/
+  padding-left: 0; /*убираем отступы*/
+}
+a {
+  text-decoration: none; /*убираем подчеркивание текста ссылок*/
+}
+li {
+  float:left; /*Размещаем список горизонтально для реализации меню*/
+  margin-right:5px; /*Добавляем отступ у пунктов меню*/
 }
 
