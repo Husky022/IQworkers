@@ -26,37 +26,43 @@ figcaption,
 blockquote,
 dl,
 dd {
-  margin: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "Montserrat Light";
+    src: url("../fonts/Montserrat-Regular.ttf");
 }
 
 html{
-  font-family: sans-serif;
-  font-size: 18px;
+    font-family: "Montserrat Light", serif;
+    font-size: 18px;
+
 }
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
 ul[class],
 ol[class] {
-  list-style: none;
+    list-style: none;
 }
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+    text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
 img {
-  max-width: 100%;
-  display: block;
+    max-width: 100%;
+    display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -64,50 +70,90 @@ input,
 button,
 textarea,
 select {
-  font: inherit;
+    font: inherit;
 }
-
-
 
 /* User styles */
 
+.button-callback{
+	border:1px solid #ccc;
+	background: Brown;
+    border-radius: 15px;
+	padding: 5px;
+	text-decoration: none;
+}
+
 .container-menu{
-    height: 130px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 90px;
     width: 100%;
     background: #E5E5E5;
 }
 
 .container-logo{
-  height: 62px;
-  width: 204px;
+    height: 40px;
+    width: 120px;
 }
 
-
-.main-content{
-  height: 640px;
-  width: 100%;
-  background: linear-gradient( rgba(13, 13, 13, 0.7), rgba(13, 13, 13, 0.7) ), url(/static/img/main_image.svg) center center;
-  /*background-size: 100%;*/
+.container-menu-buttons {
+    width: 50%;
 }
 
-.container-menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
+.container-menu-contacts{
+    display: flex;
+    flex-direction: column;
+}
+
+.first-content{
+    height: 640px;
+    width: 100%;
+    background: linear-gradient( rgba(13, 13, 13, 0.7), rgba(13, 13, 13, 0.7) ), url(/static/img/main_image.svg) center center;
+}
+
+.img-callback{
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 5px 10px 0 10px;
+}
+
+.menu-button{
+    margin: 0 3% 0 3%;
+    color: black !important;
+
+}
+
+.menu-buttons-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    font-size: 20px;
 }
 
 
 ul {
-  list-style: none; /*убираем маркеры списка*/
-  margin: 0; /*убираем отступы*/
-  padding-left: 0; /*убираем отступы*/
+    list-style: none; /*убираем маркеры списка*/
+    margin: 0; /*убираем отступы*/
+    padding-left: 0; /*убираем отступы*/
 }
-a {
-  text-decoration: none; /*убираем подчеркивание текста ссылок*/
-}
+
 li {
-  float:left; /*Размещаем список горизонтально для реализации меню*/
-  margin-right:5px; /*Добавляем отступ у пунктов меню*/
+    margin-right:5px; /*Добавляем отступ у пунктов меню*/
+}
+
+font:hover {
+    box-shadow: 2px 2px 10px grey;
+}
+
+a,
+a.text:active, /* активная/посещенная ссылка */
+a.text:hover,  /* при наведении */
+a.text {
+  text-decoration: none;
+  color: black;
 }
 
