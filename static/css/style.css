@@ -134,6 +134,38 @@ select {
     flex-direction: column;
 }
 
+.how-we-work{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 80px 17% 0 17%;
+    justify-content: space-between;
+}
+
+.how-we-work-text-box{
+    position: absolute;
+    top: 42px;
+    left: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+}
+
+.how-we-work-paragraph{
+    font-size: 28px;
+}
+
+.how-we-work-inside-text{
+    margin-top: 14px;
+}
+
+.how-we-work-item{
+    position: relative;
+    margin: 60px 80px 0 60px;
+}
+
+
+
 .video-first-content{
     background-color: rgba(255, 255, 255, 1);
 }
@@ -151,6 +183,11 @@ select {
     margin: 5px 10px 0 10px;
 }
 
+.img-how-we-work{
+    width: 180px;
+    height: 200px;
+}
+
 .img-icon-video{
     width: 22px;
     height: 22px;
@@ -162,7 +199,6 @@ select {
     height: 380px;
     width: 790px;
     margin-top: 24px;
-
 }
 
 .img-service{
@@ -198,6 +234,30 @@ select {
     margin: 80px 17% 0 17%;
 }
 
+.opportunity-box-paragraph{
+    margin-top: 30px;
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+.opportunity-box-inside-text{
+    margin-top: 20px;
+}
+
+.opportunities-item-box{
+    display: flex;
+    flex-direction: row;
+}
+
+.opportunity-text-box{
+    margin-top: 24px;
+    padding: 0 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 380px;
+}
+
 .paragraph-text{
     font-size: 44px;
     font-weight: bold;
@@ -207,11 +267,12 @@ select {
 
 .services-box{
     align-items: flex-start;
-    margin-top: 70px;
+    margin: 70px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
+
 }
 
 .service-box-item{
