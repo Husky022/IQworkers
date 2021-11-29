@@ -3,4 +3,36 @@
 {#{% load project_tags %}#}
 {% block title %}{{ title|title }}{% endblock %}
 {% block content %}
+    <div class="chapter-box">
+        <div class="paragraph-text">Возможности системы</div>
+        <div class="opportunities">
+            <div class="opportunities-item-box">
+                <img class="img-opportunity" src="{% static 'img/opportunity-1.png' %}" alt="Возможности">
+                <div class="opportunity-text-box">
+                    <span class="opportunity-box-paragraph">Климат</span>
+                    <span class="opportunity-box-inside-text">Настройка индивидуальной температуры для различных зон, созданиче сценариев.</span>
+                    <span class="opportunity-box-paragraph">Шторы/жалюзи</span>
+                    <span class="opportunity-box-inside-text">Управление шторами, создание сценариев в зависимости от освещенности.</span>
+                </div>
+            </div>
+            <div class="opportunities-item-box">
+                <div class="opportunity-text-box">
+                    <span class="opportunity-box-paragraph">Безопасность</span>
+                    <span class="opportunity-box-inside-text">Контроль протечек, видеонаблюдение, сигнализация, имитация присутствия, когда вас нет дома.</span>
+                    <span class="opportunity-box-paragraph">Мультимедиа</span>
+                    <span class="opportunity-box-inside-text">Управление TV, музыкальным центром, кинопроектором и др. мультимедийными устройствами.</span>
+                </div>
+                <img class="img-opportunity" src="{% static 'img/opportunity-2.png' %}" alt="Возможности">
+            </div>
+            <div class="opportunities-item-box">
+                <img class="img-opportunity" src="{% static 'img/opportunity-3.png' %}" alt="Возможности">
+                <div class="opportunity-text-box">
+                    <span class="opportunity-box-paragraph">Освещение</span>
+                    <span class="opportunity-box-inside-text">Создание световых расписаний и сценариев под любые ситуации и потребности: просмотр фильма, релакс, ночной режим.</span>
+                    <span class="opportunity-box-paragraph">Управление</span>
+                    <span class="opportunity-box-inside-text">Управление любым устройством через телефон, планшет, голосом. Создание индивидуального интерфейса управления.</span>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

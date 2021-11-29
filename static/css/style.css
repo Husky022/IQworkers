@@ -258,10 +258,10 @@ select {
 
 .footer-button{
     margin: 0 3% 0 3%;
-    color: lightgrey !important;
+    color: lightgrey;
 }
 
-.menu-button:hover{
+.menu-button:hover, .footer-button:hover{
     font-weight: bolder;
 }
 
