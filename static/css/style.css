@@ -235,6 +235,10 @@ select {
     margin: auto;
 }
 
+.img-service-project{
+    width: 550px;
+}
+
 .img-technology{
     width: 600px;
     height: 500px;
@@ -283,13 +287,13 @@ select {
     margin: 80px 17% 0 17%;
 }
 
-.opportunity-box-paragraph{
+.box-paragraph{
     margin-top: 30px;
     font-size: 28px;
     font-weight: bolder;
 }
 
-.opportunity-box-inside-text{
+.box-inside-text{
     margin-top: 20px;
 }
 
@@ -331,6 +335,45 @@ select {
     justify-content: center;
 }
 
+.service-item-box{
+    display: flex;
+    flex-direction: row;
+}
+
+.services-container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 10% 0 10%;
+}
+
+.services-text{
+    font-size: 44px;
+    font-weight: bold;
+    margin: 50px 0 0 0;
+    text-align: center;
+}
+
+.service-text-box{
+    margin-top: 24px;
+    padding: 0 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 380px;
+}
+
+.service-box-paragraph{
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+.service{
+    display: flex;
+    flex-direction: column;
+    margin: 80px 17% 0 17%;
+}
+
 
 .service-item-main-text{
     margin-top: 20px;
@@ -368,6 +411,9 @@ select {
     font-size: 19px;
 }
 
+.wide{
+    width: 100%;
+}
 ul {
     list-style: none; /*убираем маркеры списка*/
     margin: 0; /*убираем отступы*/
@@ -390,3 +436,10 @@ a.text {
   color: black;
 }
 
+a:hover{
+    font-weight: bolder;
+}
+
+span{
+    text-align: justify
+}
