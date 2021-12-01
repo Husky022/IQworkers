@@ -235,8 +235,8 @@ select {
     margin: auto;
 }
 
-.img-service-project{
-    width: 550px;
+.img-service-item{
+    width: 45%;
 }
 
 .img-technology{
@@ -297,6 +297,16 @@ select {
     margin-top: 20px;
 }
 
+.float-img-left{
+    float: left;
+    margin: 0 5% 5% 0;
+}
+
+.float-img-right{
+    float: right;
+    margin: 0 0 5% 5%;
+}
+
 .opportunities-item-box{
     display: flex;
     flex-direction: row;
@@ -338,13 +348,14 @@ select {
 .service-item-box{
     display: flex;
     flex-direction: row;
+    margin-bottom: 20%;
 }
 
 .services-container{
     width: 80%;
     display: flex;
     flex-direction: column;
-    margin: 0 10% 0 10%;
+    margin: 0 10% 10% 10%;
 }
 
 .services-text{
@@ -359,13 +370,15 @@ select {
     padding: 0 20px 0 20px;
     display: flex;
     flex-direction: column;
-    width: 500px;
+    width: 55%;
     height: 380px;
 }
 
 .service-box-paragraph{
     font-size: 28px;
     font-weight: bolder;
+    margin: auto;
+    margin-bottom: 5%;
 }
 
 .service{
