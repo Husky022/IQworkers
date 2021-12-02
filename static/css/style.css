@@ -149,6 +149,22 @@ select {
     flex-direction: column;
 }
 
+.contacts-box{
+    display: flex;
+    flex-direction: row;
+    margin: 80px 17% 0 17%;
+    align-items: center;
+}
+
+.contacts-box-text{
+    padding: 0 0 0 5%;
+    text-align: center;
+}
+
+.contacts-point{
+    margin: 4% 0 4% 0;
+}
+
 .how-we-work{
     display: flex;
     flex-direction: row;
@@ -352,14 +368,14 @@ select {
     margin: 5% 0 5% 0;
 }
 
-.services-container{
+.services-container, .contacts-container{
     width: 80%;
     display: flex;
     flex-direction: column;
     margin: 0 10% 10% 10%;
 }
 
-.services-text{
+.services-text, .contacts-text{
     font-size: 44px;
     font-weight: bold;
     margin: 50px 0 0 0;
@@ -375,7 +391,7 @@ select {
     height: 380px;
 }
 
-.service-box-paragraph{
+.service-box-paragraph, .contacts-box-paragraph{
     font-size: 28px;
     font-weight: bolder;
     margin: auto;
