@@ -26,6 +26,9 @@
     <option name="TEMPLATE_FOLDERS">
       <list>
         <option value="$MODULE_DIR$/mainapp/templates" />
+        <option value="$MODULE_DIR$/calcapp/templates" />
+        <option value="$MODULE_DIR$/articleapp/templates" />
+        <option value="$MODULE_DIR$/portfolioapp/templates" />
       </list>
     </option>
   </component>
