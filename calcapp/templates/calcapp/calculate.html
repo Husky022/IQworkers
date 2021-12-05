@@ -3,5 +3,91 @@
 {#{% load project_tags %}#}
 {% block title %}{{ title|title }}{% endblock %}
 {% block content %}
-    Calculate
+    <div class="content-container">
+        <div class="header-text">Рассчитайте стоимость</div>
+        <div class="calculate-box">
+            <div class="calculator">
+                <form class="form-calculator" action="" method="post">
+                    {% csrf_token %}
+                    <div class="calc-main">
+                        <div class="calculator-left">
+                            <div class="calc-paragraph-text">Желаемый функционал</div>
+                            <div class="functions-wrapper">
+                                <div class="calc-functions">
+                                    <label class="option">
+                                        <input class="checkbox-ios" type="checkbox">
+                                        <p>Освещение</p>
+                                    </label>
+                                    <label class="option">
+                                        <input class="checkbox-ios" type="checkbox">
+                                        <p>Шторы</p>
+                                    </label>
+                                    <label class="option">
+                                        <input class="checkbox-ios" type="checkbox">
+                                        <p>Вентиляция</p>
+                                    </label>
+                                    <label class="option">
+                                        <input class="checkbox-ios" type="checkbox">
+                                        <p>Кондиционирование</p>
+                                    </label>
+                                </div>
+                                <div class="calc-functions">
+                                    <label class="option">
+                                        <input class="checkbox-ios" type="checkbox">
+                                        <p>Теплые полы</p>
+                                    </label>
+                                    <label class="option">
+                                        <input class="checkbox-ios" type="checkbox">
+                                        <p>Безопасность</p>
+                                    </label>
+                                    <label class="option">
+                                        <input class="checkbox-ios" type="checkbox">
+                                        <p>Удаленное управление</p>
+                                    </label>
+                                    <label class="option">
+                                        <input class="checkbox-ios" type="checkbox" />
+                                        <p>Голосовые помощники</p>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calculator-right">
+                            <div class="calc-paragraph-text">Сведения об объекте</div>
+                            <div>
+                                <label class="option">
+                                    <input class="input-number" type="number" min="45">
+                                    <p>Площадь объекта</p>
+                                </label>
+                                <div>
+                                    <label class="option">
+                                        <input class="checkbox-ios plus_space" type="checkbox" />
+                                        <p>Квартира</p>
+                                    </label>
+                                    <label class="option">
+                                        <input class="checkbox-ios plus_space" type="checkbox" />
+                                        <p>Коттедж</p>
+                                    </label>
+                                    <label class="option">
+                                        <input class="checkbox-ios plus_space" type="checkbox" />
+                                        <p>Офис</p>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calc-down-part">
+                        <div class="calc-result">
+
+                        </div>
+                        <div class="calc-button">
+                            <button class="calc-send" type="submit">
+                                Рассчитать
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
 {% endblock %}

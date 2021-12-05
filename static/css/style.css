@@ -85,6 +85,34 @@ select {
     font: inherit;
 }
 
+
+/*checkbox-styles*/
+
+input.checkbox-ios {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  height: 1em;
+  width: 2em;
+  border-radius: 1em;
+  box-shadow: inset -1em 0px 0px 0px rgba(192, 192, 192, 1);
+  background-color: white;
+  border: 1px solid rgba(192, 192, 192, 1);
+  outline: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+input.checkbox-ios:checked {
+  box-shadow: inset 1em 0px 0px 0px rgba(238, 62, 53, 1);
+  border: 1px solid rgba(238, 62, 53, 1);
+}
+
+input.checkbox-ios:focus {
+    outline-width: 0;
+}
+
 /* User styles */
 
 .button-callback{
@@ -152,7 +180,37 @@ select {
 .callback-first-content{
     background-color: rgba(238, 62, 53, 1);
     color: snow;
+}
 
+.calc-send{
+    margin: 0 2% 2% auto;
+    width: 100%;
+    border: none;
+    border-radius: 15px;
+	padding: 19px 38px 19px 38px;
+	text-decoration: none;
+    font-size: 16px;
+    line-height: 24px;
+    align-content: center;
+    cursor: pointer;
+    font-weight: lighter;
+    background-color: rgba(238, 62, 53, 1);
+    color: snow;
+}
+
+.calc-down-part{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.calc-result{
+    width: 60%;
+}
+
+.calc-button{
+    width: 30%;
 }
 
 .chapter-box{
@@ -175,6 +233,70 @@ select {
 .contacts-point{
     margin: 4% 0 4% 0;
 }
+
+.calc-paragraph-text{
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+
+.calculate-box{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.calculator{
+    padding: 50px 30px 30px 30px;
+    width: 80%;
+    box-shadow: 5px 5px 15px rgba(13, 13, 13, 0.3);
+    border-radius: 40px;
+}
+
+.calculator-text{
+    height: 400px;
+    width: 45%;
+    border: 1px solid;
+}
+
+.calculator-left{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.calculator-right{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.functions-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.content-container{
+    width: 60%;
+    margin: 0 20% 5% 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-calculator{
+    display: flex;
+    flex-direction: column;
+}
+
+.calc-main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
 
 .how-we-work{
     display: flex;
@@ -264,6 +386,14 @@ select {
     width: 45%;
 }
 
+.input-number{
+    width: 80px;
+    height: 25px;
+    border-radius: 5px;
+    margin-right: 20px;
+    border: 1px solid dimgray;
+}
+
 .img-technology{
     width: 600px;
     height: 500px;
@@ -304,6 +434,12 @@ select {
 
 .menu-buttons-list{
     font-size: 20px;
+}
+
+.option{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
 }
 
 .opportunities{
@@ -354,6 +490,11 @@ select {
     margin-bottom: 0;
 }
 
+.plus_space{
+    margin-left: 25px;
+    margin-right: 40px;
+}
+
 .services-box{
     align-items: flex-start;
     margin: 70px;
@@ -384,7 +525,7 @@ select {
     margin: 0 10% 10% 10%;
 }
 
-.services-text, .contacts-text{
+.header-text{
     font-size: 44px;
     font-weight: bold;
     margin: 50px 0 0 0;

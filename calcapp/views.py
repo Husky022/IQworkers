@@ -11,3 +11,7 @@ class Calculator(View):
         context = {
         }
         return render(request, self.template_name, context)
+
+
+def get_calculation(request):
+    pass
