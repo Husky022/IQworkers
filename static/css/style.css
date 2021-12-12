@@ -123,6 +123,13 @@ input.checkbox-ios:focus {
 	text-decoration: none;
 }
 
+.buttons-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 30%;
+}
+
 .buttons-on-first-content{
     margin-top: 72px;
 }
@@ -182,9 +189,9 @@ input.checkbox-ios:focus {
     color: snow;
 }
 
-.calc-send{
-    margin: 0 2% 2% auto;
-    width: 100%;
+.calc-send, .button-reset-calc{
+    margin: 2% 2% 2% 2%;
+    width: 95%;
     border: none;
     border-radius: 15px;
 	padding: 19px 38px 19px 38px;
@@ -210,7 +217,7 @@ input.checkbox-ios:focus {
 }
 
 .calc-button{
-    width: 30%;
+    width: 100%;
 }
 
 .chapter-box{
