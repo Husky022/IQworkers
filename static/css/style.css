@@ -214,6 +214,10 @@ input.checkbox-ios:focus {
 
 .calc-result{
     width: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .calc-button{
@@ -417,6 +421,10 @@ input.checkbox-ios:focus {
     padding: 153px 0 0 20%;
 }
 
+.margin-left-25px{
+    margin-left: 25px;
+}
+
 .menu-button{
     margin: 0 3% 0 3%;
     color: black;
@@ -501,6 +509,56 @@ input.checkbox-ios:focus {
     margin-left: 25px;
     margin-right: 40px;
 }
+
+.price_text{
+    margin-top: 10px;
+}
+
+.price_figure{
+    animation: ani 2.5s forwards;
+    color: red;
+}
+
+.result-container{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+
+.result-note-after{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.result-after-note-text{
+    opacity: 0;
+    animation: ani 2.5s forwards;
+    animation-delay: 1s;
+    width: 80%;
+    text-align: justify
+}
+
+.result_prices_wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.result-warning-icon{
+    margin-right: 25px;
+}
+
+.result-warning-message {
+    font-size: 17px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+
 
 .services-box{
     align-items: flex-start;
@@ -629,4 +687,9 @@ a:hover{
 
 span{
     text-align: justify
+}
+
+@keyframes ani {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }
