@@ -1,6 +1,6 @@
 __pycache__/
 .idea
-secret.py
+settings_local.py
 venv_office
 venv_home
 media
