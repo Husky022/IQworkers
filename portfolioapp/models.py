@@ -7,13 +7,13 @@ class PortfolioObject(models.Model):
         ordering = ['-id']
 
     name = models.CharField(verbose_name='Название объекта', max_length=168)
+    square = models.IntegerField(verbose_name='Площадь объекта, м2', default=0)
     preview = models.TextField(verbose_name='Предпросмотр', max_length=250)
     text = models.TextField(verbose_name='Текст по объекту')
     is_active = models.BooleanField(verbose_name='Актуальность объекта', default=True, db_index=True)
     add_datetime = models.DateTimeField(verbose_name='Время добавления', auto_now_add=True)
-    start_date = models.DateTimeField(verbose_name='Начало работы по объекту')
-    finish_date = models.DateTimeField(verbose_name='Конец работы по объекту')
-    object_status = models.TextField(verbose_name='Статус объекта', max_length=20, default='В работе')
+    object_status = models.BooleanField(verbose_name='Завершен ли объект', default=True, db_index=True)
+    video = models.TextField(verbose_name='Cсылка на видео', max_length=40, blank=True)
     function_light = models.BooleanField(verbose_name='Функционал: Освещение', default=True)
     function_shutters = models.BooleanField(verbose_name='Функционал: Шторы', default=False)
     function_ventilation = models.BooleanField(verbose_name='Функционал: Вентиляция', default=False)

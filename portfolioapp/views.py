@@ -1,16 +1,15 @@
 from django.shortcuts import render
-from django.views.generic import View
+from django.views.generic import View, ListView
+from portfolioapp.models import PortfolioObject
 
 
-class Objects(View):
-    """ CBV Главной страницы """
+class Objects(ListView):
+    """ CBV Страницы с портфолио """
+
+    model = PortfolioObject
     template_name = 'portfolioapp/objects.html'
-    extra_context = {'title': 'Объекты'}
-
-    def get(self, request):
-        context = {
-        }
-        return render(request, self.template_name, context)
+    extra_context = {'title': 'Портфолио'}
+    context_object_name = 'portfolio'
 
 
 class ObjectPage(View):
