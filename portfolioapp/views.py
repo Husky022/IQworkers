@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import View, ListView
-from portfolioapp.models import PortfolioObject
+from portfolioapp.models import PortfolioObject, PortfolioImage
 
 
 class Objects(ListView):
@@ -8,8 +8,11 @@ class Objects(ListView):
 
     model = PortfolioObject
     template_name = 'portfolioapp/objects.html'
-    extra_context = {'title': 'Портфолио'}
     context_object_name = 'portfolio'
+    extra_context = {
+        'title': 'Портфолио'
+    }
+
 
 
 class ObjectPage(View):

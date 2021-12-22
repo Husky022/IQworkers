@@ -13,7 +13,11 @@
             </div>
             <div class="container-object-preview-content add-border">
                 <div class="container-img-object-preview add-border">
-                    <img class="img-object-preview add-border" src="{% static 'img/Example-photo.jpg' %}" alt="Фото объекта">
+                    {% if object.main_photo %}
+                        <img class="img-object-preview add-border" src="{{ object.main_photo.url }}" alt="Фото объекта">
+                    {% else %}
+                        <img class="img-object-preview add-border" src="{% static 'img/Example-photo.jpg' %}" alt="Фото объекта">
+                    {% endif %}
                 </div>
                 <div class="container-object-info add-border">
 {#                    <div class="preview-object-status add-border">Статус: Завершен</div>#}

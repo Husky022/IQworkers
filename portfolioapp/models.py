@@ -13,6 +13,7 @@ class PortfolioObject(models.Model):
     is_active = models.BooleanField(verbose_name='Актуальность объекта', default=True, db_index=True)
     add_datetime = models.DateTimeField(verbose_name='Время добавления', auto_now_add=True)
     object_status = models.BooleanField(verbose_name='Завершен ли объект', default=True, db_index=True)
+    main_photo = models.ImageField(verbose_name='Главное фото', upload_to='object_photos/', null=True)
     video = models.TextField(verbose_name='Cсылка на видео', max_length=40, blank=True)
     function_light = models.BooleanField(verbose_name='Функционал: Освещение', default=True)
     function_shutters = models.BooleanField(verbose_name='Функционал: Шторы', default=False)
@@ -32,7 +33,6 @@ class PortfolioImage(models.Model):
                                verbose_name='Объект', related_name='object', null=True, db_index=True)
     image = models.FileField(upload_to='object_photos/', null=True)
     is_active = models.BooleanField(verbose_name='Актуальность фото', default=True, db_index=True)
-    is_main_photo = models.BooleanField(verbose_name='Главное фото', default=False)
 
     def __str__(self):
         return self.image.name
