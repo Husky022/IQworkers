@@ -3,5 +3,10 @@
 {#{% load project_tags %}#}
 {% block title %}{{ title|title }}{% endblock %}
 {% block content %}
-    Object
+    <div class="content-container add-border">
+        <div class="header-object-text add-border">{{ object.preview }}, <span class="red">{{ object.square }}м2</span></div>
+        <div class="container-object-slider">
+        </div>
+        <div class="object-text">{{ object.text }}</div>
+    </div>
 {% endblock %}

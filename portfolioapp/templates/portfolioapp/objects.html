@@ -20,7 +20,6 @@
                     {% endif %}
                 </div>
                 <div class="container-object-info add-border">
-{#                    <div class="preview-object-status add-border">Статус: Завершен</div>#}
                     <div class="preview-object-functions add-border">
                         <p>Функции: </p>
                         <div class="container-preview-functions add-border">
@@ -113,9 +112,9 @@
                                     Видео
                                 </button>
                                 {% endif %}
-                                <button class="button-preview-detailed">
+                                <a class="button-preview-detailed" href="{% url 'portfolioapp:object_page' object.pk %}">
                                     Подробнее
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import View, ListView
+from django.views.generic import View, ListView, DetailView
 from portfolioapp.models import PortfolioObject, PortfolioImage
 
 
@@ -15,12 +15,17 @@ class Objects(ListView):
 
 
 
-class ObjectPage(View):
-    """ CBV Главной страницы """
-    template_name = 'portfolioapp/objectepage.html'
-    extra_context = {'title': 'Объект'}
+class ObjectPage(DetailView):
+    """ CBV Страницы объекта """
+    model = PortfolioObject
+    template_name = 'portfolioapp/objectpage.html'
+    extra_context = {
+        'title': 'Объект'
+    }
 
-    def get(self, request):
+    def get(self, request, pk):
         context = {
+            'title': 'Объект',
+            'object': PortfolioObject.objects.filter(id=pk).first()
         }
         return render(request, self.template_name, context)
