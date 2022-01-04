@@ -6,6 +6,23 @@
     <div class="content-container add-border">
         <div class="header-object-text add-border">{{ object.preview }}, <span class="red">{{ object.square }}м2</span></div>
         <div class="container-object-slider">
+            <div class="slideshow-container">
+                {% for item_photo in photos %}
+                    <div class="mySlides fade">
+                        <div class="numbertext">{{ forloop.counter }} / {{ photos|length }}</div>
+                        <img src="{{ item_photo.image.url }}" style="width:100%">
+                        <div class="text"></div>
+                    </div>
+                {% endfor %}
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+                <div style="text-align:center">
+                {% for item_photo in photos %}
+                    <span class="dot" onclick="currentSlide({{ forloop.counter }})"></span>
+                {% endfor %}
+            </div>
         </div>
         <div class="object-text">{{ object.text }}</div>
     </div>

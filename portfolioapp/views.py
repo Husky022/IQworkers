@@ -24,8 +24,10 @@ class ObjectPage(DetailView):
     }
 
     def get(self, request, pk):
+        object = PortfolioObject.objects.filter(id=pk).first()
         context = {
             'title': 'Объект',
-            'object': PortfolioObject.objects.filter(id=pk).first()
+            'object': object,
+            'photos': PortfolioImage.objects.filter(object=object)
         }
         return render(request, self.template_name, context)
