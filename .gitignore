@@ -4,3 +4,4 @@ settings_local.py
 venv_office
 venv_home
 media
+db.sqlite3

@@ -3,5 +3,128 @@
 {#{% load project_tags %}#}
 {% block title %}{{ title|title }}{% endblock %}
 {% block content %}
-    Objects
+    <div class="content-container add-border">
+        <div class="header-text add-border">Наши работы</div>
+        {% for object in object_list %}
+            {% if object.is_active %}
+                <div class="object-preview add-border">
+            <div class="container-object-preview-name add-border">
+                <p>{{ object.preview }}, <span class="red">{{ object.square }}м2</span></p>
+            </div>
+            <div class="container-object-preview-content add-border">
+                <div class="container-img-object-preview add-border">
+                    {% if object.main_photo %}
+                        <img class="img-object-preview add-border" src="{{ object.main_photo.url }}" alt="Фото объекта">
+                    {% else %}
+                        <img class="img-object-preview add-border" src="{% static 'img/Example-photo.jpg' %}" alt="Фото объекта">
+                    {% endif %}
+                </div>
+                <div class="container-object-info add-border">
+                    <div class="preview-object-functions add-border">
+                        <p>Функции: </p>
+                        <div class="container-preview-functions add-border">
+                            {% if object.function_light %}
+                                <div class="preview-function-box add-border">
+                                    <div class="preview-function-logo add-border">
+                                        <img class="img-icon-function-preview add-border" src="{% static 'img/functions-icon/light.png' %}" alt="Light">
+                                    </div>
+                                    <div class="preview-function-name add-border">
+                                        <p>Освещение</p>
+                                    </div>
+                                </div>
+                            {% endif %}
+                            {% if object.function_shutters %}
+                            <div class="preview-function-box add-border">
+                                <div class="preview-function-logo add-border">
+                                    <img class="img-icon-function-preview add-border" src="{% static 'img/functions-icon/zaluzi.png' %}" alt="Shutters">
+                                </div>
+                                <div class="preview-function-name add-border">
+                                    <p>Шторы</p>
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% if object.function_ventilation %}
+                            <div class="preview-function-box add-border">
+                                <div class="preview-function-logo add-border">
+                                    <img class="img-icon-function-preview add-border" src="{% static 'img/functions-icon/climat.png' %}" alt="Ventilation">
+                                </div>
+                                <div class="preview-function-name add-border">
+                                    <p>Вентиляция</p>
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% if object.function_condition %}
+                            <div class="preview-function-box add-border">
+                                <div class="preview-function-logo add-border">
+                                    <img class="img-icon-function-preview add-border" src="{% static 'img/functions-icon/climat.png' %}" alt="Condition">
+                                </div>
+                                <div class="preview-function-name add-border">
+                                    <p>Кондиционеры</p>
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% if object.function_warm_floors %}
+                            <div class="preview-function-box add-border">
+                                <div class="preview-function-logo add-border">
+                                    <img class="img-icon-function-preview add-border" src="{% static 'img/functions-icon/climat.png' %}" alt="Warm floors">
+                                </div>
+                                <div class="preview-function-name add-border">
+                                    <p>Теплые полы</p>
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% if object.function_security %}
+                            <div class="preview-function-box add-border">
+                                <div class="preview-function-logo add-border">
+                                    <img class="img-icon-function-preview add-border" src="{% static 'img/functions-icon/protechka.png' %}" alt="Security">
+                                </div>
+                                <div class="preview-function-name add-border">
+                                    <p>Безопасность</p>
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% if object.function_remote %}
+                            <div class="preview-function-box add-border">
+                                <div class="preview-function-logo add-border">
+                                    <img class="img-icon-function-preview add-border" src="{% static 'img/functions-icon/panel.png' %}" alt="Light">
+                                </div>
+                                <div class="preview-function-name add-border">
+                                    <p>Удаленное управление</p>
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% if object.function_voice_control %}
+                            <div class="preview-function-box add-border">
+                                <div class="preview-function-logo add-border">
+                                    <img class="img-icon-function-preview add-border" src="{% static 'img/functions-icon/voice.png' %}" alt="Light">
+                                </div>
+                                <div class="preview-function-name add-border">
+                                    <p>Голосовое управление</p>
+                                </div>
+                            </div>
+                            {% endif %}
+                        </div>
+                        <div class="container-object-preview-button-next  add-border">
+                            <div class="buttons-on-preview">
+                                {% if object.video %}
+                                <button class="button-preview-video">
+                                    <img class="img-icon-video" src="{% static 'img/play_video.svg' %}" alt="">
+                                    Видео
+                                </button>
+                                {% endif %}
+                                <a class="button-preview-detailed" href="{% url 'portfolioapp:object_page' object.pk %}">
+                                    Подробнее
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+
+
 {% endblock %}

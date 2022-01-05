@@ -7,5 +7,5 @@ app_name = 'portfolioapp'
 
 urlpatterns = [
     path('objects/', Objects.as_view(), name='objects'),
-    path('objectpage/<int:pk>/', ObjectPage.as_view(), name='objectpage'),
+    path('objectpage/<int:pk>/', ObjectPage.as_view(), name='object_page'),
 ]
