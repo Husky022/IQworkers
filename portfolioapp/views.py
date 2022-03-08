@@ -5,14 +5,12 @@ from portfolioapp.models import PortfolioObject, PortfolioImage
 
 class Objects(ListView):
     """ CBV Страницы с портфолио """
-
     model = PortfolioObject
     template_name = 'portfolioapp/objects.html'
     context_object_name = 'portfolio'
     extra_context = {
         'title': 'Портфолио'
     }
-
 
 
 class ObjectPage(DetailView):

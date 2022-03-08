@@ -1,24 +1,27 @@
 from django.shortcuts import render
-from django.views.generic import View
+from django.views.generic import View, ListView
+from articleapp.models import Article
 
 
-class Articles(View):
-    """ CBV Главной страницы """
+class Articles(ListView):
+    """ CBV Страницы со статьями """
+    model = Article
     template_name = 'articleapp/articles.html'
-    extra_context = {'title': 'Статьи'}
-
-    def get(self, request):
-        context = {
-        }
-        return render(request, self.template_name, context)
+    context_object_name = 'articles'
+    extra_context = {
+        'title': 'Статьи'
+    }
 
 
 class ArticlePage(View):
-    """ CBV Главной страницы """
+    """ CBV Страницы статьи """
     template_name = 'articleapp/articlepage.html'
     extra_context = {'title': 'Статья'}
 
-    def get(self, request):
+    def get(self, request, pk):
+        article = Article.objects.filter(id=pk).first()
         context = {
+            'title': 'Статья',
+            'article': article
         }
         return render(request, self.template_name, context)

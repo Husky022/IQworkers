@@ -3,5 +3,36 @@
 {#{% load project_tags %}#}
 {% block title %}{{ title|title }}{% endblock %}
 {% block content %}
-    Articles
+    <div class="content-container add-border">
+        <div class="header-text add-border">Статьи</div>
+        {% for article in object_list %}
+            {% if article.is_active %}
+                <div class="object-preview add-border">
+                    <div class="container-object-preview-name add-border">
+                        <p>{{ article.preview }}</p>
+                    </div>
+                    <div class="container-object-preview-content add-border">
+                        <div class="container-img-object-preview add-border">
+                            {% if article.main_photo %}
+                                <img class="img-object-preview add-border" src="{{ article.main_photo.url }}" alt="Фото объекта">
+                            {% else %}
+                                <img class="img-object-preview add-border" src="{% static 'img/Example-photo.jpg' %}" alt="Фото объекта">
+                            {% endif %}
+                        </div>
+                        <div class="container-object-info add-border">
+                            <div class="preview-object-functions add-border">
+                                <div class="container-object-preview-button-next  add-border">
+                                    <div class="buttons-on-preview">
+                                        <a class="button-preview-detailed" href="{% url 'articleapp:articlepage' article.pk %}">
+                                            Подробнее
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
 {% endblock %}
