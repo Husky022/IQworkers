@@ -4,7 +4,7 @@
 {% block title %}{{ title|title }}{% endblock %}
 {% block content %}
     <div class="content-container add-border">
-        <div class="header-text add-border">Наши работы</div>
+        <div class="header-text add-border">Портфолио</div>
         {% for object in object_list %}
             {% if object.is_active %}
                 <div class="object-preview add-border">

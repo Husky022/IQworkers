@@ -5,3 +5,4 @@ venv_office
 venv_home
 media
 db.sqlite3
+venv_notebook

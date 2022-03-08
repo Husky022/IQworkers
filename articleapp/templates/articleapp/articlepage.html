@@ -3,5 +3,9 @@
 {#{% load project_tags %}#}
 {% block title %}{{ title|title }}{% endblock %}
 {% block content %}
-    Article page
+    <div class="content-container add-border">
+        <div class="header-object-text add-border">{{ article.preview }}</div>
+        <div class="text">{{ article.text|safe|linebreaks }}</div>
+    </div>
+
 {% endblock %}

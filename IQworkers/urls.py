@@ -25,8 +25,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('mainapp.urls')),
     path('', include('calcapp.urls')),
-    path('', include('articleapp.urls')),
+    # path('', include('articleapp.urls')),
     path('', include('portfolioapp.urls')),
+    path('summernote/', include('django_summernote.urls')),
 ]
 
 if settings.DEBUG:
