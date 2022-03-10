@@ -116,7 +116,7 @@ input.checkbox-ios:focus {
 /* User styles */
 
 .add-border{
-    border: 1px solid seagreen;
+    /*border: 1px solid seagreen;*/
 }
 
 .base-container{
@@ -212,15 +212,24 @@ input.checkbox-ios:focus {
     flex-direction: column;
 }
 
+.container-object-preview-name, .container-object-preview-text{
+    text-align: left;
+}
+
 .container-object-preview-name{
-    font-size: 22px;
-    font-weight: bolder;
-    text-align: center;
+    width: 160px;
+    font-size: 18px;
+}
+
+.container-object-preview-text{
+    width: 200px;
+    margin: 30px 0 30px 0;
+    font-size: 14px;
 }
 
 .container-object-slider{
     width: 800px;
-    margin: 50px 10% 5% 10%;
+    margin: 50px 10% 15% 10%;
     height: 450px;
     background-color: white;
 }
@@ -351,7 +360,7 @@ input.checkbox-ios:focus {
 }
 
 .container-img-object-preview{
-    width: 45%;
+
 }
 
 .container-object-preview-content{
@@ -359,7 +368,7 @@ input.checkbox-ios:focus {
     align-items: center;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .container-object-preview-button-next{
@@ -367,9 +376,9 @@ input.checkbox-ios:focus {
 }
 
 .container-object-info{
-    width: 52%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
 }
 
 .container-preview-functions{
@@ -493,8 +502,13 @@ input.checkbox-ios:focus {
 }
 
 .img-object-preview{
-    border-radius: 5px;
+    width: 516px;
+    height: 345px;
+}
 
+.img-object-preview-count{
+    width: 135px;
+    height: 216px;
 }
 
 .img-icon-function-preview{
@@ -546,19 +560,17 @@ input.checkbox-ios:focus {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 20px 70px 30px 70px;
-    margin: 5% 10% 5% 10%;
+    margin: 0 5% 0 5%;
     width: 80%;
     height: 450px;
-    box-shadow: 5px 5px 15px rgba(13, 13, 13, 0.3);
-    border-radius: 10px;
 }
 
 .object-text{
     width: 80%;
-    text-align: justify
-}
+    text-align: justify;
+    margin-bottom: 10%;
 
+}
 
 .option{
     margin-top: 5%;
@@ -628,8 +640,8 @@ input.checkbox-ios:focus {
     color: red;
 }
 
-.preview-object-functions{
-    font-size: 16px;
+.preview-object-about{
+    margin-left: -50px;
 }
 
 .preview-function-box{
@@ -688,7 +700,9 @@ input.checkbox-ios:focus {
     text-align: center;
 }
 
-
+.reverse{
+    flex-direction: row-reverse;
+}
 
 .services-box{
     align-items: flex-start;
