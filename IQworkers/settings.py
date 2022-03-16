@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'calcapp',
     'articleapp',
     'portfolioapp',
+    'django_summernote',
 ]
 
 MIDDLEWARE = [

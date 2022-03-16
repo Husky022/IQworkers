@@ -36,3 +36,4 @@ class PortfolioImage(models.Model):
 
     def __str__(self):
         return self.image.name
+
