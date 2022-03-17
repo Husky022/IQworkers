@@ -23,7 +23,7 @@
                         </div>
                         <div>
                             <div class="container-object-info add-border">
-                                    <img class="img-object-preview-count add-border" src="{% get_static_prefix %}img/{{forloop.counter}}.png" alt="Фото объекта">
+                                <img class="img-object-preview-count add-border" src="{% get_static_prefix %}img/{{forloop.counter}}.png" alt="Фото объекта">
                                 <div class="preview-object-about add-border">
                                     <div class="container-object-preview-name add-border">
                                         <p>{{ object.preview }}, <span class="red">{{ object.square }}м2</span></p>
@@ -40,15 +40,16 @@
                                             <img class="img-icon-video" src="{% static 'img/play_video.svg' %}" alt="">
                                         </a>
                                     {% endif %}
-                                    <a class="" href="{% url 'portfolioapp:object_page' object.pk %}">
-                                        Подробнее
-                                    </a>
+                                        <a class="" href="{% url 'portfolioapp:object_page' object.pk %}">
+                                            Подробнее
+                                        </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            {% endif %}
-        {% endfor %}
+            </div>
+        {% endif %}
+    {% endfor %}
     </div>
 {% endblock %}
