@@ -20,10 +20,10 @@ options = {
 
 class Calculator(View):
     template_name = 'calcapp/calculate.html'
-    extra_context = {'title': 'Стоимость'}
 
     def get(self, request):
         context = {
+            'title': 'Стоимость'
         }
         return render(request, self.template_name, context)
 
@@ -121,12 +121,12 @@ def get_calculation(request):
         page = '<div class="result-warning-message">' \
                    '<div class="result_prices_wrap">' \
                        '<div>' \
-                           f'<p class="price_text">Проектирование: <span class="price_figure">{round(project_price) } руб</span>' \
+                           f'<p class="price_text">Проект: <span class="price_figure">{round(project_price) } руб</span>' \
                            f'<p class="price_text">Оборудование: <span class="price_figure">{round(equipment_price)} руб</span>' \
                        '</div>' \
                        '<div class="margin-left-25px">' \
-                           f'<p class="price_text">Монтажные работы: <span class="price_figure">{round(montage_price)} руб</span>' \
-                           f'<p class="price_text">Программирование: <span class="price_figure">{round(programming_price)} руб</span>'\
+                           f'<p class="price_text">Монтаж: <span class="price_figure">{round(montage_price)} руб</span>' \
+                           f'<p class="price_text">Настройка: <span class="price_figure">{round(programming_price)} руб</span>'\
                        '</div>' \
                    '</div>' \
                    f'<p class="price_text">Общая стоимость: <span class="price_figure">{round(result_price)} руб</span>' \
