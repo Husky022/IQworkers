@@ -268,7 +268,7 @@ input.checkbox-ios:focus {
 }
 
 .calc-down-part{
-    margin-top: 50px;
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -412,7 +412,7 @@ input.checkbox-ios:focus {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 80px 17% 150px 17%;
+    margin: 0 0 150px 0;
     justify-content: space-evenly;
 
 }
@@ -432,6 +432,8 @@ input.checkbox-ios:focus {
 
 .how-we-work-inside-text{
     margin-top: 14px;
+    width: 250px;
+    text-align: left;
 }
 
 .how-we-work-item{
@@ -461,8 +463,8 @@ input.checkbox-ios:focus {
 }
 
 .img-how-we-work{
-    width: 180px;
-    height: 200px;
+    width: 150px;
+    height: 180px;
 }
 
 .img-instagramm{
@@ -487,8 +489,8 @@ input.checkbox-ios:focus {
 }
 
 .img-service{
-    width: 135px;
-    height: 124px;
+    width: 67px;
+    height: 62px;
     margin: auto;
 }
 
@@ -569,7 +571,7 @@ input.checkbox-ios:focus {
     flex-direction: column;
     justify-content: space-evenly;
     margin: 0 5% 0 5%;
-    width: 80%;
+    width: 880px;
     height: 450px;
 }
 
@@ -589,7 +591,7 @@ input.checkbox-ios:focus {
 .opportunities{
     display: flex;
     flex-direction: column;
-    margin: 80px 17% 0 17%;
+    margin: 80px 0 0 0;
 }
 
 .box-paragraph{
@@ -630,7 +632,7 @@ input.checkbox-ios:focus {
 .paragraph-text{
     font-size: 44px;
     font-weight: bold;
-    margin: 230px auto;
+    margin: 200px auto;
     margin-bottom: 0;
 }
 
@@ -713,17 +715,18 @@ input.checkbox-ios:focus {
 }
 
 .services-box{
+    width: 1100px;
     align-items: flex-start;
-    margin: 70px;
+    margin: 50px 0 0 0;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .service-box-item{
     text-align: center;
-    width: 400px;
+    width: 250px;
     flex-direction: column;
     display: flex;
     justify-content: center;
@@ -778,11 +781,13 @@ input.checkbox-ios:focus {
 
 
 .service-item-main-text{
+    text-align: center;
     margin-top: 20px;
-    font-size: 28px;
+    font-size: 22px;
 }
 
 .service-item-text{
+    text-align: center;
     margin-top: 20px;
     font-size: 18px;
 }
@@ -797,11 +802,10 @@ input.checkbox-ios:focus {
 }
 
 .techology-box{
-    align-items: flex-start;
-    margin: 70px 0 70px 0;
-    display: flex;
-    flex-direction: row;
+    /*display: flex;*/
+    /*flex-direction: row;*/
     justify-content: space-evenly;
+    text-align: justify
 }
 
 .technology-container-text{
@@ -809,7 +813,7 @@ input.checkbox-ios:focus {
 }
 
 .technology-text{
-    margin-bottom: 30px;
+    margin: 30px 50px 30px 50px;
     text-align: justify;
 }
 

@@ -5,10 +5,10 @@ from django.views.generic import View
 class Main(View):
     """ CBV Главной страницы """
     template_name = 'mainapp/index.html'
-    extra_context = {'title': 'Главная'}
 
     def get(self, request):
         context = {
+            'title': 'Главная'
         }
         return render(request, self.template_name, context)
 
@@ -16,10 +16,10 @@ class Main(View):
 class Services(View):
     """ CBV Главной страницы """
     template_name = 'mainapp/services.html'
-    extra_context = {'title': 'Услуги'}
 
     def get(self, request):
         context = {
+            'title': 'Услуги'
         }
         return render(request, self.template_name, context)
 
@@ -27,10 +27,10 @@ class Services(View):
 class Contacts(View):
     """ CBV Главной страницы """
     template_name = 'mainapp/contacts.html'
-    extra_context = {'title': 'Контакты'}
 
     def get(self, request):
         context = {
+            'title': 'Контакты'
         }
         return render(request, self.template_name, context)
 
@@ -38,9 +38,20 @@ class Contacts(View):
 class Command(View):
     """ CBV Главной страницы """
     template_name = 'mainapp/command.html'
-    extra_context = {'title': 'Команда'}
 
     def get(self, request):
         context = {
+            'title': 'Команда'
+        }
+        return render(request, self.template_name, context)
+
+
+class Privacy(View):
+    """ CBV страницы политики конфиденциальности """
+    template_name = 'mainapp/privacy.html'
+
+    def get(self, request):
+        context = {
+            'title': 'Приватность'
         }
         return render(request, self.template_name, context)
