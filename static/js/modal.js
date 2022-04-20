@@ -1,6 +1,6 @@
 
 $(document).ready(function() {
-	$('#start, .callback-first-content').click( function(event){
+	$('#start, .callback-first-content, .consultation').click( function(event){
 		event.preventDefault();
 		$('#overlay').fadeIn(250,
 		 	function(){

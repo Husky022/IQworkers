@@ -147,6 +147,6 @@ def get_calculation(request):
 
 
 def reset_calculation(request):
-    if request.is_ajax():
+    if is_ajax(request=request):
         return JsonResponse({'result': '200'})
     return HttpResponseRedirect(reverse('mainapp:main'))

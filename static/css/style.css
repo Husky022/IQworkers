@@ -945,6 +945,6 @@ cursor: pointer;
     text-align: center;
 }
 
-.about-privacy-link{
+.about-privacy-link, .questionnaire, .consultation{
     color: blue;
 }
