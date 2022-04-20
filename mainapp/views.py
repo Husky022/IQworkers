@@ -3,6 +3,7 @@ from django.views.generic import View
 from .forms import AppForm
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from .utilities import ClientHandler
 
 
 appform = AppForm()
@@ -19,6 +20,7 @@ class Main(View):
         return render(request, self.template_name, context)
 
     def post(self, request):
+        new_client = ClientHandler(request)
         print(request.POST)
         return HttpResponseRedirect(reverse('mainapp:main'))
 
