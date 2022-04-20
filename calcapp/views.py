@@ -2,6 +2,10 @@ from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.shortcuts import render
 from django.urls import reverse
 from django.views.generic import View
+from mainapp.forms import AppForm
+
+appform = AppForm()
+
 
 options = {
     'chk-light': 0.3,
@@ -23,7 +27,9 @@ class Calculator(View):
 
     def get(self, request):
         context = {
-            'title': 'Стоимость'
+            'title': 'Стоимость',
+            'appform': appform
+
         }
         return render(request, self.template_name, context)
 
