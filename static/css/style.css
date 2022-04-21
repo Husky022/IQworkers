@@ -120,6 +120,7 @@ input.checkbox-ios:focus {
 }
 
 .base-container{
+    margin-top: 90px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -185,6 +186,14 @@ input.checkbox-ios:focus {
     height: 90px;
     width: 100%;
     background: #E5E5E5;
+}
+
+.fixed{
+    position: fixed;
+}
+
+.shadow{
+    box-shadow: 0 5px 5px red;
 }
 
 .container-footer{
@@ -439,6 +448,20 @@ input.checkbox-ios:focus {
 .how-we-work-item{
     position: relative;
     margin: 100px 200px 100px 0;
+}
+
+.img-how-we-work-test{
+    background: url("../img/1.png") no-repeat;
+    background-size: contain;
+    width: 150px;
+    height: 180px;
+}
+
+.img-how-we-work-test:hover{
+    background: url("../img/1-red.png") no-repeat;
+    background-size: contain;
+    width: 150px;
+    height: 180px;
 }
 
 .video-first-content{
@@ -945,6 +968,6 @@ cursor: pointer;
     text-align: center;
 }
 
-.about-privacy-link, .questionnaire, .consultation{
+.about-privacy-link, .questionnaire, .calc-consultation{
     color: blue;
 }

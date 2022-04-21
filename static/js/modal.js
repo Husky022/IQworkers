@@ -1,6 +1,6 @@
 
 $(document).ready(function() {
-	$('#start, .callback-first-content, .consultation').click( function(event){
+	$('#start, .callback-first-content, #calc-consultation').click( function(event){
 		event.preventDefault();
 		$('#overlay').fadeIn(250,
 		 	function(){
@@ -9,6 +9,8 @@ $(document).ready(function() {
 					.animate({opacity: 1, top: '30%'}, 490);
 		});
 	});
+
+
 
     $('#video').click( function(event){
 		event.preventDefault();

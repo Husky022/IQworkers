@@ -16,9 +16,9 @@
                             <div class="container-img-object-preview add-border">
                                 <img class="img-object-preview add-border" src="{% static 'img/img_example_1.png' %}" alt="Фото объекта">
                             </div>
-                            <div>
+                            <div class="obj-info-preview">
                                 <div class="container-object-info add-border">
-                                    <img class="img-object-preview-count add-border" src="{% get_static_prefix %}img/{{forloop.counter}}.png" alt="Фото объекта">
+                                    <img class="img-object-preview-count add-border for-change" src="{% get_static_prefix %}img/{{forloop.counter}}.png" alt="Фото объекта">
                                     <div class="preview-object-about add-border">
                                         <div class="container-object-preview-name add-border">
                                             <p>{{ object.preview }}, <span class="red">{{ object.square }}м2</span></p>
