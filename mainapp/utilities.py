@@ -1,6 +1,7 @@
 from .models import Client
 from django.conf import settings
 from django.core.mail import send_mail
+from django.template.loader import render_to_string
 
 
 class ClientHandler:
@@ -17,5 +18,8 @@ class ClientHandler:
 
     def send_mail(self):
         client = f'Имя: ' + self.name + 'Почта: ' + self.mail + 'Телефон: ' + self.phone
-        send_mail('Новая заявка', client, settings.EMAIL_HOST_USER, ['iqworks@bk.ru'])
-
+        send_mail('Новая заявка', client, settings.EMAIL_HOST_USER, ['iqworks@bk.ru'])    
+        data = {'name': self.name, 'mail': self.mail, 'phone': self.phone}
+        msg = render_to_string('mainapp/template_mail.html', {'context': data})
+        send_mail('Обратная связь', msg, settings.EMAIL_HOST_USER, [self.mail], html_message=msg)
+        

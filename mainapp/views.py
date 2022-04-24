@@ -21,7 +21,6 @@ class Main(View):
 
     def post(self, request):
         new_client = ClientHandler(request)
-        print(request.POST)
         return HttpResponseRedirect(reverse('mainapp:main'))
 
 

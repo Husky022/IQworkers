@@ -971,3 +971,9 @@ cursor: pointer;
 .about-privacy-link, .questionnaire, .calc-consultation{
     color: blue;
 }
+
+/*стили для уведомлений в письме*/
+
+.mail-color{
+    background-color: gray;
+}
