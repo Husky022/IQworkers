@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from django.views.generic import View, ListView, DetailView
 from portfolioapp.models import PortfolioObject, PortfolioImage
+from mainapp.forms import AppForm
+
+appform = AppForm()
 
 
 class Objects(ListView):
@@ -9,7 +12,8 @@ class Objects(ListView):
     template_name = 'portfolioapp/objects.html'
     context_object_name = 'portfolio'
     extra_context = {
-        'title': 'Портфолио'
+        'title': 'Портфолио',
+        'appform': appform
     }
 
 
@@ -18,7 +22,8 @@ class ObjectPage(DetailView):
     model = PortfolioObject
     template_name = 'portfolioapp/objectpage.html'
     extra_context = {
-        'title': 'Объект'
+        'title': 'Объект',
+        'appform': appform
     }
 
     def get(self, request, pk):
@@ -26,6 +31,7 @@ class ObjectPage(DetailView):
         context = {
             'title': 'Объект',
             'object': object,
-            'photos': PortfolioImage.objects.filter(object=object)
+            'photos': PortfolioImage.objects.filter(object=object),
+            'appform': appform
         }
         return render(request, self.template_name, context)

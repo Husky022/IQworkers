@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from django.views.generic import View, ListView
 from articleapp.models import Article
+from mainapp.forms import AppForm
+
+appform = AppForm()
 
 
 class Articles(ListView):
@@ -9,7 +12,8 @@ class Articles(ListView):
     template_name = 'articleapp/articles.html'
     context_object_name = 'articles'
     extra_context = {
-        'title': 'Статьи'
+        'title': 'Статьи',
+        'appform': appform
     }
 
 
@@ -22,6 +26,7 @@ class ArticlePage(View):
         article = Article.objects.filter(id=pk).first()
         context = {
             'title': 'Статья',
-            'article': article
+            'article': article,
+            'appform': appform
         }
         return render(request, self.template_name, context)

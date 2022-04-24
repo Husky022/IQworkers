@@ -1,7 +1,11 @@
 from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
 from django.urls import reverse
 from django.views.generic import View
+from mainapp.forms import AppForm
+
+appform = AppForm()
+
 
 options = {
     'chk-light': 0.3,
@@ -23,7 +27,9 @@ class Calculator(View):
 
     def get(self, request):
         context = {
-            'title': 'Стоимость'
+            'title': 'Стоимость',
+            'appform': appform
+
         }
         return render(request, self.template_name, context)
 
@@ -31,8 +37,12 @@ class Calculator(View):
         print(request.POST)
 
 
+def is_ajax(request):
+    return request.META.get('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest'
+
+
 def get_calculation(request):
-    if request.is_ajax():
+    if is_ajax(request=request):
 
         if not request.POST.dict()['square'] and not request.POST.dict()['checked_type']:
             page = '<div class="result-container">' \
@@ -137,6 +147,6 @@ def get_calculation(request):
 
 
 def reset_calculation(request):
-    if request.is_ajax():
+    if is_ajax(request=request):
         return JsonResponse({'result': '200'})
     return HttpResponseRedirect(reverse('mainapp:main'))

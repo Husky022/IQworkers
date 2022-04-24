@@ -1,6 +1,6 @@
 {% load static %}
 
-<div class="container-menu">
+<div class="container-menu fixed">
     <div class="container-logo">
         <a href="{% url 'mainapp:main' %}"><img src="{% static 'img/logo.png' %}" alt="Главная"></a>
     </div>
@@ -19,7 +19,8 @@
         <ul>
             <li><a href="#">Тел. +7 (495) 008-81-68</a></li>
             <li>
-                <a href="#"><img class="img-callback" src="{% static 'img/phone-icon.svg' %}" alt="Обратный звонок">Заказать звонок</a>
+                <a href="#" id="start"><img class="img-callback" src="{% static 'img/phone-icon.svg' %}"
+                                  alt="Обратный звонок">Заказать звонок</a>
             </li>
         </ul>
     </div>

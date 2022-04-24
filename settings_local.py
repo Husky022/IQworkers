@@ -20,3 +20,5 @@ DATABASES = {
     }
 }
 
+EMAIL_HOST_USER = 'iqworks@bk.ru'
+EMAIL_HOST_PASSWORD = 'fQJqjUNCn5J17e61bBAF'

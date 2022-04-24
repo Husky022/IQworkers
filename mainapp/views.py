@@ -1,6 +1,12 @@
 from django.shortcuts import render
 from django.views.generic import View
+from .forms import AppForm
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+from .utilities import ClientHandler
 
+
+appform = AppForm()
 
 class Main(View):
     """ CBV Главной страницы """
@@ -8,9 +14,14 @@ class Main(View):
 
     def get(self, request):
         context = {
-            'title': 'Главная'
+            'title': 'Главная',
+            'appform': appform
         }
         return render(request, self.template_name, context)
+
+    def post(self, request):
+        new_client = ClientHandler(request)
+        return HttpResponseRedirect(reverse('mainapp:main'))
 
 
 class Services(View):
@@ -19,7 +30,8 @@ class Services(View):
 
     def get(self, request):
         context = {
-            'title': 'Услуги'
+            'title': 'Услуги',
+            'appform': appform
         }
         return render(request, self.template_name, context)
 
@@ -30,7 +42,8 @@ class Contacts(View):
 
     def get(self, request):
         context = {
-            'title': 'Контакты'
+            'title': 'Контакты',
+            'appform': appform
         }
         return render(request, self.template_name, context)
 
@@ -52,6 +65,7 @@ class Privacy(View):
 
     def get(self, request):
         context = {
-            'title': 'Приватность'
+            'title': 'Приватность',
+            'appform': appform
         }
         return render(request, self.template_name, context)
